@@ -7,7 +7,7 @@ import { environment } from 'apps/dashboard/src/environments/environment';
   providedIn: 'root',
 })
 export class KickersService {
-  model = 'kickers';
+  model = 'todos';
 
   constructor(private http: HttpClient) {}
 
@@ -32,7 +32,7 @@ export class KickersService {
   }
 
   private getUrl() {
-    return `${environment.apiEndpoint}${this.model}`;
+    return `${environment.apiEndpoint}/${this.model}`;
   }
 
   private getUrlWithId(id) {

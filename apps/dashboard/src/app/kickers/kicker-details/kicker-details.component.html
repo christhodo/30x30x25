@@ -4,7 +4,7 @@
       Editing {{ originalTitle }}
     </span>
     <ng-template #elseBlock>
-      Select Kicker
+      Select Task
     </ng-template>
   </mat-card-title>
   <form #form="ngForm" (submit)="saved.emit(currentKicker)">
@@ -19,16 +19,21 @@
           required
         />
       </mat-form-field>
-      <mat-form-field class="full-width">
+      <section>
+        <mat-checkbox [(ngModel)]="currentKicker.completed" name="completed">
+          Complete
+        </mat-checkbox>
+      </section>
+      <!-- <mat-form-field class="full-width">
         <input
           matInput
           placeholder="Description"
-          [(ngModel)]="currentKicker.description"
+          [(ngModel)]="currentKicker.descr"
           type="text"
           name="description"
           required
         />
-      </mat-form-field>
+      </mat-form-field> -->
     </mat-card-content>
     <mat-card-actions>
       <button

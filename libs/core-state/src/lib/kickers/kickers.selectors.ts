@@ -41,7 +41,7 @@ export const getSelectedKickerId = createSelector(
 const emptyKicker: Kicker = {
   id: null,
   title: '',
-  description: '',
+  completed: false,
 };
 
 export const getSelectedKicker = createSelector(
