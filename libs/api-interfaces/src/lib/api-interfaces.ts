@@ -13,5 +13,5 @@ export interface BaseEntity {
 
 export interface Kicker extends BaseEntity {
   title: string;
-  description: string;
+  completed: boolean;
 }
